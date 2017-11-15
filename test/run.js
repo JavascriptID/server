@@ -1,9 +1,6 @@
 const server = require('../');
 const request = require('request-promises');
 const port = require('./port');
-const config = require('../src/config');
-const schema = require('../src/config/schema');
-
 
 // Make an object with the options as expected by request()
 const normalize = (method, url, port, options) => {
@@ -75,7 +72,9 @@ module.exports = function (...middle) {
     const opts = await serverOptions(middle);
 
     const error = server.router.error(ctx => {
-      return server.reply.status(500).send(ctx.error.message);
+      if (!ctx.res.headersSent) {
+        return server.reply.status(500).send(ctx.error.message);
+      }
     });
 
     const ctx = await server(opts, middle, error);
