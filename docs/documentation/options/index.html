@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="initial"><head><title>Options documentation - server.js</title><meta property="og:title" content="Options documentation - server.js"/><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="server, javascript, js, node.js, library, html, html5, express"><meta name="description" content="The different options and how to use them to make Node.js development easier."/><meta property="og:description" content="The different options and how to use them to make Node.js development easier."/><link rel="shortcut icon" type="image/png" href="/img/logo.png"><meta property="og:url" content="http://serverjs.io/"><meta property="og:image" content="https://serverjs.io/img/code.png"><link href="/assets/style.min.css" rel="stylesheet"></head><body id="top"><div class="width-1100"></div><nav><a class="brand" href="/"><img class="logo" src="/img/logo.svg" alt="logo"><span class="text">server.js</span></a><input class="show" id="bmenu" type="checkbox"><label class="burger pseudo button switch" for="bmenu">menu</label><div class="menu"><a class="pseudo button" href="https://medium.com/server-for-node-js" target="_blank">Blog</a><a class="pseudo button" href="https://github.com/franciscop/server" target="_blank">Github</a><a class="pseudo button" href="/tutorials">Tutorials</a><a class="button" href="/documentation">Documentation</a></div></nav><article class="documentation"><div class="flex"><section class="toc"><h2><a href="/documentation/">Documentation</a></h2><ul><li><label class="more"></label><a href="/documentation/">Introduction</a><ul><li><a href="/documentation/#getting-started">Getting started</a></li><li><a href="/documentation/#basic-usage">Basic usage</a></li><li><a href="/documentation/#middleware">Middleware</a></li><li><a href="/documentation/#express-middleware">Express middleware</a></li><li><a href="/documentation/#cors">CORS</a></li><li><a href="/documentation/#routing">Routing</a></li><li><a href="/documentation/#advanced-topics">Advanced topics</a></li></ul></li><li><label class="more"></label><a href="/documentation/options/">Options</a><ul><li><a href="/documentation/options/#port">Port</a></li><li><a href="/documentation/options/#secret">Secret</a></li><li><a href="/documentation/options/#public">Public</a></li><li><a href="/documentation/options/#views">Views</a></li><li><a href="/documentation/options/#engine">Engine</a></li><li><a href="/documentation/options/#env">Env</a></li><li><a href="/documentation/options/#favicon">Favicon</a></li><li><a href="/documentation/options/#parse">Parse</a></li><li><a href="/documentation/options/#session">Session</a></li><li><a href="/documentation/options/#security">Security</a></li><li><a href="/documentation/options/#log">Log</a></li></ul></li><li><label class="more"></label><a href="/documentation/context/">Context</a><ul><li><a href="/documentation/context/#-options">.options</a></li><li><a href="/documentation/context/#-data">.data</a></li><li><a href="/documentation/context/#-params">.params</a></li><li><a href="/documentation/context/#-query">.query</a></li><li><a href="/documentation/context/#-session">.session</a></li><li><a href="/documentation/context/#-headers">.headers</a></li><li><a href="/documentation/context/#-cookie">.cookie</a></li><li><a href="/documentation/context/#-files">.files</a></li><li><a href="/documentation/context/#-ip">.ip</a></li><li><a href="/documentation/context/#-url">.url</a></li><li><a href="/documentation/context/#-method">.method</a></li><li><a href="/documentation/context/#-path">.path</a></li><li><a href="/documentation/context/#-secure">.secure</a></li><li><a href="/documentation/context/#-xhr">.xhr</a></li></ul></li><li><label class="more"></label><a href="/documentation/router/">Router</a><ul><li><a href="/documentation/router/#get-">get()</a></li><li><a href="/documentation/router/#post-">post()</a></li><li><a href="/documentation/router/#put-">put()</a></li><li><a href="/documentation/router/#del-">del()</a></li><li><a href="/documentation/router/#error-">error()</a></li><li><a href="/documentation/router/#sub-">sub()</a></li><li><a href="/documentation/router/#socket-">socket()</a></li></ul></li><li><label class="more"></label><a href="/documentation/reply/">Reply</a><ul><li><a href="/documentation/reply/#cookie-">cookie()</a></li><li><a href="/documentation/reply/#download-">download()</a></li><li><a href="/documentation/reply/#header-">header()</a></li><li><a href="/documentation/reply/#json-">json()</a></li><li><a href="/documentation/reply/#jsonp-">jsonp()</a></li><li><a href="/documentation/reply/#redirect-">redirect()</a></li><li><a href="/documentation/reply/#render-">render()</a></li><li><a href="/documentation/reply/#send-">send()</a></li><li><a href="/documentation/reply/#status-">status()</a></li><li><a href="/documentation/reply/#type-">type()</a></li></ul></li></ul></section><div class="main"><h1 id="options">Options</h1>
+<!DOCTYPE html><html class="initial"><head><title>Options documentation - server.js</title><meta property="og:title" content="Options documentation - server.js"/><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="server, javascript, js, node.js, library, html, html5, express"><meta name="description" content="The different options and how to use them to make Node.js development easier."/><meta property="og:description" content="The different options and how to use them to make Node.js development easier."/><link rel="shortcut icon" type="image/png" href="/img/logo.png"><meta property="og:url" content="http://serverjs.io/"><meta property="og:image" content="https://serverjs.io/img/code.png"><link href="/assets/style.min.css" rel="stylesheet"></head><body id="top"><div class="width-1100"></div><nav><a class="brand" href="/"><img class="logo" src="/img/logo.svg" alt="logo"><span class="text">server.js</span></a><input class="show" id="bmenu" type="checkbox"><label class="burger pseudo button switch" for="bmenu">menu</label><div class="menu"><a class="pseudo button" href="https://medium.com/server-for-node-js" target="_blank">Blog</a><a class="pseudo button" href="https://github.com/franciscop/server" target="_blank">Github</a><a class="pseudo button" href="/tutorials">Tutorials</a><a class="button" href="/documentation">Documentation</a></div></nav><article class="documentation"><div class="flex"><section class="toc"><h2><a href="/documentation/">Documentation</a></h2><form class="searchform"><input class="search" placeholder="search"></form><div class="searchbox"></div><ul><li><label class="more"></label><a href="/documentation/">Introduction</a><ul><li><a href="/documentation/#getting-started">Getting started</a></li><li><a href="/documentation/#basic-usage">Basic usage</a></li><li><a href="/documentation/#middleware">Middleware</a></li><li><a href="/documentation/#express-middleware">Express middleware</a></li><li><a href="/documentation/#cors">CORS</a></li><li><a href="/documentation/#routing">Routing</a></li><li><a href="/documentation/#advanced-topics">Advanced topics</a></li></ul></li><li><label class="more"></label><a href="/documentation/options/">Options</a><ul><li><a href="/documentation/options/#port">Port</a></li><li><a href="/documentation/options/#secret">Secret</a></li><li><a href="/documentation/options/#public">Public</a></li><li><a href="/documentation/options/#views">Views</a></li><li><a href="/documentation/options/#engine">Engine</a></li><li><a href="/documentation/options/#env">Env</a></li><li><a href="/documentation/options/#favicon">Favicon</a></li><li><a href="/documentation/options/#parse">Parse</a></li><li><a href="/documentation/options/#session">Session</a></li><li><a href="/documentation/options/#security">Security</a></li><li><a href="/documentation/options/#log">Log</a></li></ul></li><li><label class="more"></label><a href="/documentation/context/">Context</a><ul><li><a href="/documentation/context/#-options">.options</a></li><li><a href="/documentation/context/#-data">.data</a></li><li><a href="/documentation/context/#-params">.params</a></li><li><a href="/documentation/context/#-query">.query</a></li><li><a href="/documentation/context/#-session">.session</a></li><li><a href="/documentation/context/#-headers">.headers</a></li><li><a href="/documentation/context/#-cookie">.cookie</a></li><li><a href="/documentation/context/#-files">.files</a></li><li><a href="/documentation/context/#-ip">.ip</a></li><li><a href="/documentation/context/#-url">.url</a></li><li><a href="/documentation/context/#-method">.method</a></li><li><a href="/documentation/context/#-path">.path</a></li><li><a href="/documentation/context/#-secure">.secure</a></li><li><a href="/documentation/context/#-xhr">.xhr</a></li></ul></li><li><label class="more"></label><a href="/documentation/router/">Router</a><ul><li><a href="/documentation/router/#get-">get()</a></li><li><a href="/documentation/router/#post-">post()</a></li><li><a href="/documentation/router/#put-">put()</a></li><li><a href="/documentation/router/#del-">del()</a></li><li><a href="/documentation/router/#error-">error()</a></li><li><a href="/documentation/router/#sub-">sub()</a></li><li><a href="/documentation/router/#socket-">socket()</a></li></ul></li><li><label class="more"></label><a href="/documentation/reply/">Reply</a><ul><li><a href="/documentation/reply/#cookie-">cookie()</a></li><li><a href="/documentation/reply/#download-">download()</a></li><li><a href="/documentation/reply/#header-">header()</a></li><li><a href="/documentation/reply/#json-">json()</a></li><li><a href="/documentation/reply/#jsonp-">jsonp()</a></li><li><a href="/documentation/reply/#redirect-">redirect()</a></li><li><a href="/documentation/reply/#render-">render()</a></li><li><a href="/documentation/reply/#send-">send()</a></li><li><a href="/documentation/reply/#status-">status()</a></li><li><a href="/documentation/reply/#type-">type()</a></li></ul></li></ul></section><div class="main"><h1 id="options">Options</h1>
 <p>Available options, their defaults, types and names in <code>.env</code>:</p>
 <table>
 <thead>
@@ -78,7 +78,7 @@
 </tr>
 </tbody>
 </table>
-<p>You can set those through the first argument in <code>server()</code> function:</p>
+<p>You can set those through <strong>the first argument</strong> in <code>server()</code> function:</p>
 <pre><code class="lang-js">// Import the main library
 const server = require(&#39;server&#39;);
 
@@ -165,10 +165,24 @@ expect(res.body.port).toBe(5001);
 <p>To set the public folder in the environment add this to <a href="#environment">your <code>.env</code></a>:</p>
 <pre><code>PUBLIC=public
 </code></pre><p>Through the initialization parameter:</p>
-<pre><code class="lang-js">server({ public: &#39;public&#39; });
+<pre><code class="lang-js">const options = {
+  public: &#39;public&#39;
+};
+
+/* test */
+const same = ctx =&gt; ({ public: ctx.options.public });
+const res = await run(options, same).get(&#39;/&#39;);
+expect(res.body.public).toBe(path.join(process.cwd() + &#39;/public&#39;));
 </code></pre>
 <p>To set the root folder specify it as <code>&#39;./&#39;</code>:</p>
-<pre><code class="lang-js">server({ public: &#39;./&#39; });
+<pre><code class="lang-js">const options = {
+  public: &#39;./&#39;
+};
+
+/* test */
+const same = ctx =&gt; ({ public: ctx.options.public });
+const res = await run(options, same).get(&#39;/&#39;);
+expect(res.body.public).toBe(process.cwd() + path.sep);
 </code></pre>
 <p>If you don&#39;t want any of your files to be accessible publicly, then you can cancel it through a false or empty value:</p>
 <pre><code class="lang-js">server({ public: false });
@@ -179,10 +193,24 @@ server({ public: &#39;&#39; });
 <p>To set the views folder in the environment add this to <a href="#environment">your <code>.env</code></a>:</p>
 <pre><code>VIEWS=views
 </code></pre><p>Through the initialization parameter:</p>
-<pre><code class="lang-js">server({ views: &#39;views&#39; });
+<pre><code class="lang-js">const options = {
+  views: &#39;views&#39;
+};
+
+/* test */
+const same = ctx =&gt; ({ views: ctx.options.views });
+const res = await run(options, same).get(&#39;/&#39;);
+expect(res.body.views).toBe(path.join(process.cwd(), &#39;views&#39;) + path.sep);
 </code></pre>
 <p>To set the root folder specify it as <code>&#39;./&#39;</code>:</p>
-<pre><code class="lang-js">server({ views: &#39;./&#39; });
+<pre><code class="lang-js">const options = {
+  views: &#39;./&#39;
+};
+
+/* test */
+const same = ctx =&gt; ({ views: ctx.options.views });
+const res = await run(options, same).get(&#39;/&#39;);
+expect(res.body.views).toBe(process.cwd() + path.sep);
 </code></pre>
 <p>If you don&#39;t have any view file you don&#39;t have to create the folder. The files within <code>views</code> should all have an extension such as <code>.hbs</code>, <code>.pug</code>, etc. To see how to install and use those keep reading.</p>
 <h2 id="engine">Engine</h2>
@@ -301,7 +329,39 @@ server({ favicon: &#39;public/favicon.png&#39; },
 </code></pre>
 <p>You can <a href="https://github.com/expressjs/session">read more about these options in Express&#39; package documentation</a>.</p>
 <p>All of them are optional. Secret will inherit the secret from the global secret if it is not explicitly set.</p>
-<p>If redis or <code>REDIS_URL</code> is set with a Redis URL, a Redis store will be launched to achieve persistence in your sessions. Read more about this in <a href="http://serverjs.io/tutorials/sessions-production/">the tutorial <strong>Sessions in production</strong></a>.</p>
+<p>If the session.redis option or <code>REDIS_URL</code> is set with a Redis URL, a Redis store will be launched to achieve persistence in your sessions. Read more about this in <a href="http://serverjs.io/tutorials/sessions-production/">the tutorial <strong>Sessions in production</strong></a>. Example:</p>
+<pre><code class="lang-bash"># .env
+REDIS_URL=redis://:password@hostname:port/db_number
+</code></pre>
+<pre><code class="lang-js">// index.js
+const server = require(&#39;server&#39;);
+
+// It will work by default since it&#39;s an env variable
+server({}, ...);
+</code></pre>
+<p>Otherwise, to pass it manually (<strong>not recommended</strong>) pass it through the options:</p>
+<pre><code class="lang-js">const redis = &#39;redis://:password@hostname:port/db_number&#39;;
+server({ session: { redis } }, ...);
+</code></pre>
+<h3 id="session-stores">Session Stores</h3>
+<p>To use one of the many available third party session stores, pass it as the <code>store</code> parameter:</p>
+<pre><code class="lang-js">// Create your whole store thing
+const store = ...;
+
+// Use it within the session
+server({ session: { store } }, ...);
+</code></pre>
+<p>Many of the stores will need you to pass the raw <strong><code>session</code></strong> initially like this:</p>
+<pre><code class="lang-js">const RedisStore = require(&#39;connect-redis&#39;)(session);
+const store = RedisStore({ ... });
+</code></pre>
+<p>You can access this variable through <code>server.session</code> after requiring <code>server</code>:</p>
+<pre><code class="lang-js">const server = require(&#39;server&#39;);
+const RedisStore = require(&#39;connect-redis&#39;)(server.session);
+const store = RedisStore({ ... });
+
+server({ session: { store } }, ...);
+</code></pre>
 <h2 id="security">Security</h2>
 <p>It combines <a href="https://github.com/expressjs/csurf">Csurf</a> and <a href="https://github.com/helmetjs/helmet">Helmet</a> to give extra security:</p>
 <pre><code class="lang-js">server({
@@ -309,6 +369,9 @@ server({ favicon: &#39;public/favicon.png&#39; },
     csrf: {
       ignoreMethods: [&#39;GET&#39;, &#39;HEAD&#39;, &#39;OPTIONS&#39;],
       value: req =&gt; req.body.csnowflakerf
+    },
+    frameguard: {
+      action: &#39;deny&#39;
     }
   }
 });
@@ -325,7 +388,7 @@ server({ favicon: &#39;public/favicon.png&#39; },
 <p>For quick tests/prototypes, the whole security plugin can be disabled (<strong>not recommended</strong>):</p>
 <pre><code class="lang-js">server({ security: false });
 </code></pre>
-<p>Individual parts can also be disabled like this:</p>
+<p>Individual parts can also be disabled like this. This makes sense if you use other mechanisms to avoid CSRF, such as JWT:</p>
 <pre><code class="lang-js">server({
   security: {
     csrf: false
@@ -387,8 +450,8 @@ SECURITY_XSSFILTER
   }
 });
 </code></pre>
-<p>This allows you for instance to handle some specific errors in a different way.</p>
-<h2 id="keep-reading">Keep reading</h2><p>List of all the topics:</p><div class="pages"><a class="button" href="/documentation/options">Options</a><a class="button" href="/documentation/context">Context</a><a class="button" href="/documentation/router">Router</a><a class="button" href="/documentation/reply">Reply</a></div></div></div></article><script src="https://unpkg.com/paperdocs@1.0.9/paperdocs.min.js"></script><script src="https://unpkg.com/smoothscroll-polyfill@0.4.0/dist/smoothscroll.js"></script><script>// Add language tag to the code for print
+<p>This allows you for instance to handle some specific errors in a different way. It is also useful for testing that the correct data is printed on the console in certain situations.</p>
+<h2 id="keep-reading">Keep reading</h2><p>List of all the topics:</p><div class="pages"><a class="button" href="/documentation/">Introduction</a><a class="button" href="/documentation/options/">Options</a><a class="button" href="/documentation/context/">Context</a><a class="button" href="/documentation/router/">Router</a><a class="button" href="/documentation/reply/">Reply</a></div></div></div></article><script src="https://unpkg.com/paperdocs@1.0.9/paperdocs.min.js"></script><script src="https://unpkg.com/smoothscroll-polyfill@0.4.0/dist/smoothscroll.js"></script><script>// Add language tag to the code for print
 const regName = /lang(uage)?\-/;
 const hasName = name => regName.test(name);
 const map = { js: 'javascript', jade: 'pug' };
@@ -399,9 +462,92 @@ const map = { js: 'javascript', jade: 'pug' };
 });
 
 // Display the proper part in the TOC
-u('.toc [href]').filter(el => {
+const tocLinks = u('.toc [href]');
+tocLinks.filter(el => {
   return u(el).attr('href').split('#')[0] === window.location.pathname;
 }).parent().addClass('active');
+
+// Build the search
+if (u('article.documentation').length) {
+  const base = el => u(el).attr('href').split('#')[0];
+  const unique = (value, i, all) => all.indexOf(value) === i;
+  const searchLinks = tocLinks.nodes.map(base).filter(unique);
+  const all = {};
+  const headings = {};
+  Promise.all(searchLinks.map(link => fetch(link).then(res => res.text()).then(html => {
+    u('<div>').html(html).find('article.documentation h1, article.documentation h2, article.documentation h3, article.documentation h4').each(el => {
+      if (el.id) {
+        if (el.nodeName === 'H1') {
+          headings[`${link}`] = u(el).text();
+        } else {
+          headings[`${link}#${el.id}`] = u(el).text();
+        }
+      }
+    });
+    all[link] = u('<div>').html(html).find('article.documentation .main').text().toLowerCase();
+  }))).then(() => {
+
+    const search = term => {
+      if (!term) {
+        u('.search').removeClass('active');
+        u('.searchbox').html('<ul></ul>');
+        u('.toc > ul').removeClass('hidden');
+        return;
+      }
+      u('.toc > ul').addClass('hidden');
+      u('.search').addClass('active');
+      const value = term.toLowerCase();
+      u('.searchbox').html('<ul></ul>');
+      const found = [];
+      for (let link in headings) {
+        if (headings[link].toLowerCase().includes(value)) {
+          found.push(link.split('#')[0]);
+          u('.searchbox ul').append(`<li><a href="${link}">★ ${headings[link]}</a></li>`);
+        }
+      }
+      let extra = false;
+      for (let link in all) {
+        if (all[link].includes(value) && !found.includes(link)) {
+          if (!extra) {
+            u('.searchbox ul').append('<li class="tip">Also mentioned here:</li>');
+          }
+          extra = true;
+          u('.searchbox ul').append(`<li><a href="${link}">${link}</a></li>`);
+        }
+      }
+      u('.searchbox a').on('click', e => {
+        u('.search').removeClass('active');
+        u('.search').first().value = '';
+        u('.searchbox').html('<ul></ul>');
+        u('.toc > ul').removeClass('hidden');
+      });
+    };
+
+    const initial = u('.search').first().value;
+    if (initial) {
+      search(initial);
+    }
+    // Autofocus only on desktop
+    var isTouch = 'ontouchstart' in document.documentElement;
+    if (!isTouch) {
+      u('.search').first().focus();
+    }
+    u('.search').on('input', e => {
+      search(e.target.value);
+    });
+    u('.searchform').handle('submit', e => {
+      search(u('.search').first().value);
+      u('.searchbox a').first().click();
+    });
+  });
+}
+
+u('.main h2, .main h3, .main h4, .main h5').each(el => {
+  const path = `${window.location.pathname.split('#')[0]}#${el.id}`;
+  u(el).html(`<a href="${path}"><span class="self">#</span>${u(el).html()}</a>`);
+});
+
+
 
 // Remove an incorrect "get" that there was highlighted
 Prism.hooks.add('after-highlight', function(env){
@@ -420,14 +566,14 @@ Prism.hooks.add('after-highlight', function(env){
     }
     if (el.innerHTML === 'public') u(el).replace('public');
   });
-
-  // Syntax highlighting changes vertical align. This makes it to scroll back
-  // to the current hash (if any) after page load+highlight
-  const hash = window.location.hash;
-  if (hash && u(hash).length) {
-    u(hash).scroll();
-  }
 });
+
+// Syntax highlighting changes vertical align. This makes it to scroll back
+// to the current hash (if any) after page load+highlight
+const hash = window.location.hash;
+if (hash && u(hash).length) {
+  u(hash).scroll();
+}
 
 // Show more/less when clicking the chevron
 u('.toc .more').handle('click', e => {
@@ -439,8 +585,10 @@ u('.toc .more').handle('click', e => {
 });
 
 // Go to the appropriate part of the page when clicking an internal link
-u('a').on('click', e => {
-  const href = u(e.currentTarget).attr('href');
+// Manual event delegation
+u('article').on('click', e => {
+  if (e.target.nodeName !== 'A') return;
+  const href = u(e.target).attr('href');
   if (!href) return;
   const [url, hash] = href.split('#');
 
