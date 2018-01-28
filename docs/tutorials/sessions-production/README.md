@@ -63,8 +63,20 @@ server({ session: { storage } }, [
 ]);
 ```
 
+If you need to use express' session, as some libraries might require you to do, you can access it through `server.session`:
 
+```js
+const server = require('server');
 
+// Mount it on express' session
+const MongoStore = require('connect-mongo')(server.session);
+const store = MongoStore(options);
+
+server(
+  { session: { store } }
+  ...
+);
+```
 
 
 ### Alternatives
