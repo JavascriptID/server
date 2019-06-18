@@ -1,11 +1,12 @@
 {
   "name": "server",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "A modern and powerful server for Node.js",
   "main": "server.js",
   "scripts": {
     "start": "node .",
     "dev": "grunt watch",
+    "build": "grunt",
     "test": "jest --coverage --forceExit",
     "kill-comment": "Kill a process running in a specific port: PORT=3000 npm run kill",
     "kill": "kill $(lsof -t -i:$PORT) && echo '> KILLED!' || echo '> The port was already dead'"

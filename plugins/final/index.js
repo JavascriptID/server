@@ -6,13 +6,14 @@ const FinalError = require('./errors');
 // Make sure that a (404) reply is sent if there was no user reply
 const handler = async ctx => {
   if (!ctx.res.headersSent) {
-
     // Send the user-set status
     ctx.res.status(ctx.res.explicitStatus ? ctx.res.statusCode : 404).send();
 
     // Show it only if there was no status set in a return
     if (!ctx.res.explicitStatus) {
-      ctx.log.error(new FinalError('noreturn'));
+      ctx.log.error(
+        new FinalError('noreturn', { url: ctx.url, method: ctx.method })
+      );
     }
   }
 };
