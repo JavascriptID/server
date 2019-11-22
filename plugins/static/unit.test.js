@@ -24,4 +24,22 @@ describe('static plugin', () => {
     expect(res.statusCode).toBe(404);
     expect(out.log).toMatch(/did not return anything/);
   });
+
+  it('does not serve if set to false', async () => {
+    let out = {};
+    const log = storeLog(out);
+    const res = await run({ public: false, log }).get('/logo.png');
+
+    expect(res.statusCode).toBe(404);
+    expect(out.log).toMatch(/did not return anything/);
+  });
+
+  it('does not serve if set to false', async () => {
+    let out = {};
+    const log = storeLog(out);
+    const res = await run({ public: '', log }).get('/logo.png');
+
+    expect(res.statusCode).toBe(404);
+    expect(out.log).toMatch(/did not return anything/);
+  });
 });

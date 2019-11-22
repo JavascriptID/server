@@ -11,6 +11,7 @@ module.exports = {
     }
   },
   init: ctx => {
+    if (!ctx.options.static.public) return;
     module.exports.before = [
       modern(ctx.express.static(ctx.options.static.public))
     ];
