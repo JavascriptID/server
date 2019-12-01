@@ -34,14 +34,16 @@ module.exports = {
   },
   init: ctx => {
     if (!ctx.options.session.store && ctx.options.session.redis) {
-      ctx.options.session.store = new RedisStore({ url: ctx.options.session.redis });
+      ctx.options.session.store = new RedisStore({
+        url: ctx.options.session.redis
+      });
     }
     sessionMiddleware = session(ctx.options.session);
   },
   before: ctx => modern(sessionMiddleware)(ctx),
   launch: ctx => {
-    ctx.io.use(function (socket, next) {
-      sessionMiddleware(socket.request, socket.request.res, next);
+    ctx.io.use(function(socket, next) {
+      sessionMiddleware(socket.request, socket.request.res || {}, next);
     });
   }
 };
